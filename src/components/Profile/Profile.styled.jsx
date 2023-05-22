@@ -5,7 +5,7 @@ export const ProfileCards = styled.div`
   border: 3px solid #fbd1d1;
   background-color: #fbfafc;
   border-radius: 20px;
-  margin-top:50px;
+  margin-top: 50px;
 `;
 export const Avatar = styled.img`
   width: 230px;

@@ -7,14 +7,14 @@ import {
 } from './Statistic.styled';
 const Statistic = ({ stats, title }) => {
   return (
-    <StatisticSection class="statistics">
-      <StatisticTitle class="title">{title || 'Upload stats'}</StatisticTitle>
-      <StatisticList class="stat-list">
+    <StatisticSection className="statistics">
+      <StatisticTitle className="title">{title || 'Upload stats'}</StatisticTitle>
+      <StatisticList className="stat-list">
         {stats.map(e => (
   
-  <StatisticListItem style={{background:rundomColorGenerator()}} key={e.id} class="item">
-            <span class="label">{e.label}</span>
-            <span class="percentage">{e.percentage}%</span>
+  <StatisticListItem style={{background:rundomColorGenerator()}} key={e.id} className="item">
+            <span className="label">{e.label}</span>
+            <span className="percentage">{e.percentage}%</span>
           </StatisticListItem>
         ))}
       </StatisticList>
@@ -29,7 +29,7 @@ Statistic.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
-  ).isRequired,
+  )
 };
 function rundomColorGenerator() {
     let r = Math.floor(Math.random() * 256),

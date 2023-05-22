@@ -20,7 +20,7 @@ export const StatisticList = styled.ul`
 export const StatisticListItem = styled.li`
   display: flex;
   flex-direction: column;
-  width: calc(100%/4);
+  width: calc(100% / 4);
   text-align: center;
-    padding: 5px;
+  padding: 5px;
 `;

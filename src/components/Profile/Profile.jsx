@@ -10,25 +10,25 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   const { followers, likes, views } = stats;
   return (
     <ProfileCards>
-      <div class="description">
-        <Avatar src={avatar} alt="User avatar" class="avatar" />
-        <AbautProfile class="name">{username}</AbautProfile>
-        <AbautProfile class="tag">@{tag}</AbautProfile>
-        <AbautProfile class="location">{location}</AbautProfile>
+      <div className="description">
+        <Avatar src={avatar} alt="User avatar" className="avatar" />
+        <AbautProfile className="name">{username}</AbautProfile>
+        <AbautProfile className="tag">@{tag}</AbautProfile>
+        <AbautProfile className="location">{location}</AbautProfile>
       </div>
 
-      <StatsList class="stats">
+      <StatsList className="stats">
         <ListItem>
-          <span class="label">Followers </span>
-          <span class="quantity">{followers}</span>
+          <span className="label">Followers </span>
+          <span className="quantity">{followers}</span>
         </ListItem>
         <ListItem>
-          <span class="label">Views </span>
-          <span class="quantity">{views}</span>
+          <span className="label">Views </span>
+          <span className="quantity">{views}</span>
         </ListItem>
         <ListItem>
-          <span class="label">Likes </span>
-          <span class="quantity">{likes}</span>
+          <span className="label">Likes </span>
+          <span className="quantity">{likes}</span>
         </ListItem>
       </StatsList>
     </ProfileCards>
@@ -39,12 +39,12 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(
+  stats: PropTypes.objectOf(
     PropTypes.shape({
       followers: PropTypes.number.isRequired,
       views: PropTypes.number.isRequired,
       likes: PropTypes.number.isRequired,
     }).isRequired
-  ).isRequired,
+  )
 };
 export default Profile;
